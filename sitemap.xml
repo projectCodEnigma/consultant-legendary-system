@@ -112,6 +112,14 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+
+    <!-- Discovery Call Page -->
+    <url>
+        <loc>https://consultant.hanslacida.com/discovery-call/</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 <!-- Locations in the USA with High Revenue Companies -->
     <url>
         <loc>https://consultant.hanslacida.com/locations/new-york-city</loc>
