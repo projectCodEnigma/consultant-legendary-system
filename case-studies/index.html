@@ -1,269 +1,248 @@
 <!DOCTYPE html> 
 <html lang="en">
 <head>
+    <script>
+        window.TallyConfig = {
+          "formId": "D41GoR",
+          "popup": {
+            "emoji": {
+              "text": "👋",
+              "animation": "wave"
+            },
+            "open": {
+              "trigger": "scroll",
+              "scrollPercent": 100
+            },
+            "overlay": true,
+            "autoClose": 5000,
+            "doNotShowAfterSubmit": true,
+            "formEventsForwarding": true
+          }
+        };
+        </script>
+        
+        <script async src="https://tally.so/widgets/embed.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore tailored PPC management packages designed for your business needs.">
     <meta name="keywords" content="PPC Management, Google Ads, Digital Marketing">
     <meta name="author" content="Hans Lacida">
     <title>PPC Case Studies - HansLacida.com</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+    <!-- Tailwind for shared site styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>html{scroll-behavior:smooth;}</style>
+    <!-- E-E-A-T / Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "PPC Case Studies",
+      "description": "Real Google Ads case studies and results managed by Hans Lacida, a performance-driven Google Ads specialist.",
+      "url": "https://www.hanslacida.com/case-studies/",
+      "author": {
+        "@type": "Person",
+        "name": "Hans Lacida",
+        "jobTitle": "Google Ads Specialist",
+        "url": "https://www.hanslacida.com/",
+        "sameAs": [
+          "https://www.linkedin.com/in/hanslacida",
+          "https://twitter.com/hanslacida"
+        ],
+        "knowsAbout": [
+          "Google Ads Management",
+          "PPC Campaign Optimization",
+          "Performance Max",
+          "Conversion Rate Optimization",
+          "Analytics & Tracking"
+        ],
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Google Ads Certified"
+          }
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ZELDIGITAL®"
         }
-        header {
-            background-color: #0d6bc2;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 1.8em;
-        }
-        header nav {
-            margin: 10px 0;
-        }
-        header nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        header nav a:hover {
-            color: #18bc9c;
-        }
-        .hero {
-            background-color: #0d6bc2;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
-        .hero h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        .hero p {
-            font-size: 1.2em;
-            margin: 10px 0;
-        }
-        .cta-button {
-            display: inline-block;
-            padding: 15px 30px;
-            margin-top: 20px;
-            background-color: #07099b;
-            color: white;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s, transform 0.2s;
-        }
-        .cta-button:hover {
-            background-color: #2225df;
-            transform: scale(1.05);
-        }
-        section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-        section h2 {
-            margin-bottom: 20px;
-            font-size: 1.8em;
-            color: #2c3e50;
-        }
-        .case-study {
-            margin: 20px auto;
-            width: 80%;
-            text-align: left;
-        }
-        .case-study h3 {
-            color: #0d6bc2;
-        }
-        .case-study p {
-            margin: 5px 0;
-        }
-        footer {
-            background-color: #0d6bc2;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
-        footer nav {
-            margin: 10px 0;
-        }
-        footer nav a {
-            color: #ecebe1;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        footer nav a:hover {
-            color: #9e2828;
-        }
-                        /* Centering the Header */
-                        header {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #0d6bc2; /* Optional for a cleaner look */
-        }
-
-        /* Center Align Navigation */
-        header nav {
-            display: inline-flex; /* Inline-flex keeps it centered */
-            justify-content: center;
-            gap: 15px;
-        }
-
-        header h1 {
-            margin-bottom: 10px;
-            font-size: 1.8em;
-            color: #333;
-        }
-
-        /* General Navigation Styling */
-        nav a {
-            text-decoration: none;
-            color: #333;
-            padding: 10px 15px;
-            position: relative;
-        }
-
-        nav a:hover {
-            background-color: #ffffff;
-            border-radius: 5px;
-        }
-
-        /* Dropdown Specific Styling */
-        .dropdown-container {
-            position: relative;
-        }
-
-        .dropdown-menu {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%); /* Center the dropdown */
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: none;
-            z-index: 1000;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        .dropdown-menu li {
-            margin: 0;
-            padding: 0;
-        }
-
-        .dropdown-menu a {
-            display: block;
-            padding: 10px 15px;
-            text-decoration: none;
-            color: #333;
-            white-space: nowrap;
-        }
-
-        .dropdown-menu a:hover {
-            background-color: #f0f0f0;
-        }
-
-        /* Show Dropdown on Hover */
-        .dropdown-container:hover .dropdown-menu {
-            display: block;
-        }
-    </style>
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "HansLacida.com",
+        "url": "https://www.hanslacida.com/"
+      }
+    }
+    </script>
 </head>
-<body>
-    <header>
-        <h1>PPC Case Studies</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/#about">About</a>
-            <a href="/services/">Services</a>
-            <a href="/services/ppc-services-pricing/">Pricing</a>
-            <div class="dropdown-container">
-                <a href="/case-studies/" class="dropdown-toggle">Case Studies</a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="/case-studies/hypothetical-case-studies/" class="dropdown-toggle">Hypothetical Case Studies</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/case-studies/global-streaming/">Global Streaming</a></li>
-                            <li><a href="/case-studies/logistics-company/">Logistics Company</a></li>
-                            <li><a href="/case-studies/luxury-brand/">Luxury Brand</a></li>
-                            <li><a href="/case-studies/saas-entertainment/">SaaS Entertainment</a></li>
-                        </ul>
-                    </li>
-                </ul>
+<body class="font-sans text-gray-800 bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between py-4">
+                <a href="/" class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg flex items-center justify-center text-white font-bold">HL</div>
+                    <span class="text-lg font-semibold text-gray-900">HansLacida</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-6 text-sm">
+                    <a href="/" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="/#about" class="text-gray-700 hover:text-blue-600">About</a>
+                    <a href="/services/" class="text-gray-700 hover:text-blue-600">Services</a>
+                    <a href="/case-studies/" class="text-blue-600 font-semibold">Case Studies</a>
+                    <a href="/#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+                </nav>
+                <a href="/discovery-call/" class="hidden md:inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium">Book Call</a>
             </div>
-            <a href="/contact/">Contact</a>
-        </nav>
+        </div>
     </header>
 
-    <section class="hero">
-        <h1>Explore Our Success Stories</h1>
-        <p>Learn how our tailored PPC strategies deliver measurable results for businesses like yours.</p>
-        <a href="/services/ppc-consultant-pricing/" class="cta-button">View Our PPC Consulting Packages</a>
+    <!-- Hero -->
+    <section class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-14">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Explore Proven PPC Case Studies</h1>
+            <p class="text-blue-100 text-lg max-w-3xl mx-auto">Learn how focused strategy, clean tracking, and disciplined execution compound results.</p>
+            <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/discovery-call/" class="bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50">Book a Discovery Call</a>
+                <a href="/case-studies/20x-roas/" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-700">See 20x ROAS</a>
+            </div>
+        </div>
     </section>
 
-    <section>
-        <h2>Case Studies</h2>
-
-        <div class="case-study">
-            <h3>eCommerce Business - Maximizing ROAS</h3>
-            <p><strong>Objective:</strong> Increase return on ad spend (ROAS) and overall sales.</p>
-            <p><strong>Ad Spend:</strong> $35,600</p>
-            <p><strong>Results:</strong> Achieved a 744% ROAS, generating $265,000 in conversion value.</p>
-            <p><strong>Strategy:</strong> Advanced audience segmentation, dynamic product ads, and A/B testing.</p>
+    <!-- Before We Work (Requirements) -->
+    <section style="padding: 32px 20px;">
+        <div style="max-width: 900px; margin: 0 auto; text-align: left; background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px;">
+            <h2 style="margin: 0 0 12px; font-size: 1.6em; color: #111827;">Before We Work Together</h2>
+            <p style="margin: 8px 0; color: #374151;">
+                I’m a Google Ads expert (not an agency) — a performance-driven specialist with over a decade of hands-on experience.
+            </p>
+            <p style="margin: 12px 0; color: #374151;">
+                If you’re a US-based brand spending $5,000/month or more on Google Ads (in one account) and you believe:
+            </p>
+            <ul style="margin: 0 0 12px 0; padding-left: 20px; color: #111827;">
+                <li>✅ Growth comes before launch</li>
+                <li>✅ Results take time and testing</li>
+                <li>✅ Accounts need strategy, not shortcuts</li>
+            </ul>
+            <p style="margin: 12px 0; color: #374151;">Then we speak the same language.</p>
+            <p style="margin: 0; color: #111827; font-weight: 600;">DM me if you’re looking for a long-term Google Ads partner, not just another media buyer.</p>
         </div>
+    </section>
 
-        <div class="case-study">
-            <h3>Local Business - Locksmith Campaign</h3>
-            <p><strong>Objective:</strong> Drive local leads at an efficient cost per lead.</p>
-            <p><strong>Ad Spend:</strong> $13,000</p>
-            <p><strong>Results:</strong> 788 phone calls with a cost per lead of $16.95.</p>
-            <p><strong>Strategy:</strong> Hyper-local targeting and time-specific bidding.</p>
+    <!-- Case Studies Grid -->
+    <section class="py-14">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Selected Wins</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-gray-900">eCommerce — Peak 20x ROAS</h3>
+                    <p class="text-sm text-gray-600 mt-2">$35,600 spend → $265,000 revenue</p>
+                    <p class="text-sm text-gray-700 mt-2">Segmentation, feed clean‑up, PMax assets, disciplined negatives.</p>
+                    <a class="inline-block mt-3 text-blue-600 font-semibold hover:text-blue-800" href="/case-studies/20x-roas/">Open Case Study →</a>
+                </article>
+                <article class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-gray-900">Local Services — Lead Scale</h3>
+                    <p class="text-sm text-gray-600 mt-2">788 qualified calls @ $16.95 CPL</p>
+                    <p class="text-sm text-gray-700 mt-2">Geo/time bidding, call‑only structure, intent sculpting.</p>
+                </article>
+                <article class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-gray-900">Manufacturing — CPA Down 50%</h3>
+                    <p class="text-sm text-gray-600 mt-2">$23 → $14 per qualified lead</p>
+                    <p class="text-sm text-gray-700 mt-2">Query controls, LP overhaul, offer clarity.</p>
+                </article>
+                <article class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-gray-900">Multi‑Brand Portfolio</h3>
+                    <p class="text-sm text-gray-600 mt-2">$250k–$300k/mo managed under efficiency guardrails</p>
+                    <p class="text-sm text-gray-700 mt-2">Playbooks, governance, cross‑brand signal lift.</p>
+                </article>
+                <article class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-gray-900">Merchant Center Recovery</h3>
+                    <p class="text-sm text-gray-600 mt-2">Misrepresentation issues fixed, profitable relaunch</p>
+                    <a class="inline-block mt-3 text-blue-600 font-semibold hover:text-blue-800" href="/misrepresentation-fix/">See Service →</a>
+                </article>
         </div>
-
-        <div class="case-study">
-            <h3>Engine Manufacturing Client - Reducing CPA</h3>
-            <p><strong>Objective:</strong> Lower the cost per acquisition (CPA) while increasing overall conversions.</p>
-            <p><strong>Results:</strong> Reduced CPA from $23 to $14.</p>
-            <p><strong>Strategy:</strong> Streamlined keyword targeting and optimized landing pages.</p>
-        </div>
-
-        <div class="case-study">
-            <h3>Multi-Industry Portfolio - Diverse Client Success</h3>
-            <p><strong>Objective:</strong> Provide measurable growth for a range of industries.</p>
-            <p><strong>Monthly Ad Spend:</strong> $250,000 - $300,000</p>
-            <p><strong>Results:</strong> Increased conversion rates by up to 15% and reduced CPA by 50%.</p>
-            <p><strong>Strategy:</strong> Industry-specific PPC strategies with ongoing optimizations.</p>
-            <a href="/about/#testimonials" class="cta-button">See Our Client Testimonials</a>
         </div>
     </section>
     
-    <footer>
-        <p>&copy; 2025 HansLacida. All Rights Reserved.</p>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/#about">About</a>
-            <a href="/services/">Services</a>
-            <a href="/services/ppc-services-pricing/">Pricing</a>
-            <a href="/case-studies/">Case Studies</a>
-            <a href="/contact/">Contact</a>
-        </nav>
+    <!-- Footer (from homepage) -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                <!-- Brand Section -->
+                <div class="col-span-2 md:col-span-2 lg:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">HL</span>
+                        </div>
+                        <span class="ml-3 text-xl font-bold">Hans Lacida</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Data-driven digital marketing expert helping businesses maximize ROI and drive sustainable growth through strategic PPC, SEO, and analytics.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/hanslacida" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/hanslacida" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Navigation</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="/about/" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="/work-with-me/" class="hover:text-white transition-colors">Work With Me</a></li>
+                        <li><a href="/blog/" class="hover:text-white transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="/services/" class="hover:text-white transition-colors">All Services</a></li>
+                        <li><a href="/ppc-management/" class="hover:text-white transition-colors">PPC Management</a></li>
+                        <li><a href="/google-ads-specialist/" class="hover:text-white transition-colors">Google Ads</a></li>
+                        <li><a href="/leading-marketing-firm/" class="hover:text-white transition-colors">Marketing Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Resources</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="https://pricing.hanslacida.com" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="/case-studies/" class="hover:text-white transition-colors">Case Studies</a></li>
+                        <li><a href="/client-success-stories/" class="hover:text-white transition-colors">Success Stories</a></li>
+                        <li><a href="/our-process/" class="hover:text-white transition-colors">Our Process</a></li>
+                        <li><a href="https://hanslacida.beehiiv.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Newsletter</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="/#contact" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="https://tidycal.com/zeldigital/discovery-call" class="hover:text-white transition-colors">Book Discovery Call</a></li>
+                        <li><a href="/free-marketing-audit-call/" class="hover:text-white transition-colors">Free Marketing Audit</a></li>
+                        <li><a href="/request-call-back/" class="hover:text-white transition-colors">Request Callback</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 HansLacida | <sup>ZELDIGITAL®</sup> - Trusted Digital Advertising for U.S. Businesses. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
